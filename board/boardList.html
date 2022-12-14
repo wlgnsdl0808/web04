@@ -20,7 +20,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdownMenu.min.js"></script>
   <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <link rel="stylesheet" href="resources/css/normalize.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
@@ -69,6 +68,9 @@ ul { list-style:none; }
 
 .lead, .subheader { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 
+.cont { width: 80px;}
+.reg { width: 120px;}
+.vis { width: 100px;}
 </style>
 </head>
 <body>
@@ -78,7 +80,7 @@ ul { list-style:none; }
 			<div class="top-bar-left" id="gnb">
 			   <!-- <button class="menu-icon" type="button" data-toggle="responsive-menu"></button> -->
 			  <ul class="dropdown menu" data-dropdown-menu>
-				<li class="menu-text"><a href="../index.html" class="logo"><img src="../img/logo.png"></a></li>
+				<li class="menu-text"><a href="../index.html" class="logo"><img src="../img/logo.png" alt=""></a></li>
 				<li><a href="#">마이</a></li>
 				<li class="has-submenu">
 			   <a href="#">고객지원</a>
@@ -107,24 +109,19 @@ ul { list-style:none; }
 		      <table>
 		      	<thead>
 		      		<tr>
-		      			<th width="80">No</th>
+		      			<th class="cont">No</th>
 		      			<th>Title</th>
-		      			<th width="120">RegDate</th>
-		      			<th width="100">Visited</th>
+		      			<th class="reg">RegDate</th>
+		      			<th class="vis">Visited</th>
 		      		</tr>
 		      	</thead>
 		      	<tbody>
-		      	<c:forEach items="${boardList }" var="board" varStatus="status">
 		      		<tr>
 		      			<td>1</td>
 		      			<td><a href="boardDetail.html">공지사항1</a></td>
-		      			<td>
-	      					<fmt:parseDate value="${board.regdate }" var="resdate" pattern="yyyy-MM-dd HH:mm:ss" />
-	      					<fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
-		      			</td>
 		      			<td>2022-11-10</td>
-		      		</tr>
-		      	</c:forEach>	
+		      			<td>0</td>
+		      		</tr>	
 		      	</tbody>
 		      </table>
 	      </div>
@@ -152,16 +149,16 @@ ul { list-style:none; }
 			<div class="footer-nav-right">
 			  <ul class="footer-nav-menu-icons">
 				<li class="footer-nav-item">
-				  <a href="get-involved/support.html"><img class="footer-social-icon" src="${path3 }/resources/icon/email-icon.svg" alt=""></a>
+				  <a href="get-involved/support.html"></a>
 				</li>
 				<li class="footer-nav-item">
-				  <a href="https://www.facebook.com/foundation/"><img class="footer-social-icon" src="${path3 }/resources/icon/facebook-icon.svg" alt=""></a>
+				  <a href="https://www.facebook.com/foundation/"></a>
 				</li>
 				<li class="footer-nav-item">
-				  <a href="https://twitter.com/FoundationCSS"><img class="footer-social-icon" src="${path3 }/resources/icon/twitter-icon.svg" alt=""></a>
+				  <a href="https://twitter.com/FoundationCSS"></a>
 				</li>
 				<li class="footer-nav-item">
-				  <a href="https://www.youtube.com/channel/UCS7eqSwmBYuslPEKeJBq-kg"><img class="footer-social-icon" src="${path3 }/resources/icon/youtube-icon.svg" alt=""></a>
+				  <a href="https://www.youtube.com/channel/UCS7eqSwmBYuslPEKeJBq-kg"></a>
 				</li>
 			  </ul>
 			</div>
